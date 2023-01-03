@@ -1,0 +1,35 @@
+#clock{
+    margin: 60px auto;
+    position: relative;
+    background:url(Clock-Face-Images-GraphicsFairy.jpg) ;
+    background-position-x: center;
+    background-size: cover;
+    height: 316px;
+    width: 316px;
+}
+#clock > #hh, #sh,#mh{
+    position:absolute;
+    transform-origin: bottom;
+    background: black;
+    border-radius: 7px;
+    opacity: 1;
+}
+#clock > #hh{
+    width: 12px;
+    height: 60px;
+    top: 100px;
+    left: 152px;
+}
+#clock > #mh{
+    width: 6px;
+    height: 80px;
+    top: 80px;
+    left: 155px;
+}
+#clock > #sh{
+    width: 1px;
+    height: 100px;
+    top: 60px;
+    left: 157px;
+    opacity: .3;
+}

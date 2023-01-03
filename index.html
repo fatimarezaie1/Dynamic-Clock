@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Clock</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div id="clock">
+        <div id="hh"></div>
+        <div id="mh"></div>
+        <div id="sh"></div>
+    </div>
+    <script>
+      
+        function adjustClock(){
+
+            let ampm;
+            d = new Date();
+            h = d.getHours();
+            m = d.getMinutes();
+            s = d.getSeconds();
+            hdeg = h *30 + m/2;
+            if(h >=12){ampm ="pm"}
+            else{
+                ampm = "am"
+            }
+            hh.style.transform = "rotate("+hdeg+"deg)";
+            mh.style.transform =" rotate("+m*6+"deg)";
+            sh.style.transform = "rotate("+s*6+"deg)";
+           
+        }
+        window.addEventListener("load",function(){
+            this.setInterval(adjustClock,1000)
+        });
+            </script>
+</body>
+</html>
